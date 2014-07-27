@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.entities;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.util.Vector;
@@ -132,13 +132,13 @@ public class RemoteMushroomEntity extends EntityMushroomCow implements RemoteEnt
 	}
 
 	@Override
-	protected String aS()
+	protected String aT()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.HURT);
 	}
 
 	@Override
-	protected String aT()
+	protected String aU()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.DEATH);
 	}
@@ -157,7 +157,7 @@ public class RemoteMushroomEntity extends EntityMushroomCow implements RemoteEnt
 					new DesireItem(new DesireSwim(), 1),
 					new DesireItem(new DesirePanic(2.0D), 1),
 					new DesireItem(new DesireBreed(), 2),
-					new DesireItem(new DesireTempt(Item.b(Items.WHEAT), false, 1.25D), 3),
+					new DesireItem(new DesireTempt(Item.getId(Items.WHEAT), false, 1.25D), 3),
 					new DesireItem(new DesireFollowParent(1.25D), 4),
 					new DesireItem(new DesireWanderAround(), 5),
 					new DesireItem(new DesireLookAtNearest(EntityHuman.class, 6), 6),

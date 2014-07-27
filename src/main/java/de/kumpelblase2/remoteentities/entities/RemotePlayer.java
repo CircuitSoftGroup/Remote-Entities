@@ -1,7 +1,7 @@
 package de.kumpelblase2.remoteentities.entities;
 
 import java.util.UUID;
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import net.minecraft.util.com.google.common.base.Charsets;
 import net.minecraft.util.com.google.common.collect.Iterables;
 import net.minecraft.util.com.mojang.authlib.*;
@@ -9,7 +9,7 @@ import net.minecraft.util.com.mojang.authlib.properties.Property;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.block.BlockFace;
-import org.bukkit.craftbukkit.v1_7_R3.CraftWorld;
+import org.bukkit.craftbukkit.v1_7_R4.CraftWorld;
 import org.bukkit.entity.Player;
 import org.bukkit.metadata.FixedMetadataValue;
 import de.kumpelblase2.remoteentities.EntityManager;
@@ -61,7 +61,7 @@ public class RemotePlayer extends RemoteAttackingBaseEntity<Player>
 
 		final Location _inLocation = event.getSpawnLocation();
 
-		GameProfile profile = MinecraftServer.getServer().getUserCache().a(this.getName());
+		GameProfile profile = MinecraftServer.getServer().getUserCache().getProfile(this.getName());
 		if(profile == null)
 		{
 			MinecraftServer.getServer().getGameProfileRepository().findProfilesByNames(new String[] { this.getName() }, Agent.MINECRAFT, new ProfileLookupCallback()

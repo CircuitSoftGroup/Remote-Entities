@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.api.thinking.selectors;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 
 public class EntitySelectorNotUndead implements IEntitySelector
 {

@@ -1,7 +1,7 @@
 package de.kumpelblase2.remoteentities.utilities;
 
-import net.minecraft.server.v1_7_R3.*;
-import org.bukkit.craftbukkit.v1_7_R3.entity.CraftLivingEntity;
+import net.minecraft.server.v1_7_R4.*;
+import org.bukkit.craftbukkit.v1_7_R4.entity.CraftLivingEntity;
 import org.bukkit.entity.LivingEntity;
 import de.kumpelblase2.remoteentities.api.RemoteEntity;
 import de.kumpelblase2.remoteentities.api.RemoteEntityHandle;
@@ -82,7 +82,7 @@ public class NMSUtil
 	public static int getMaxHeadRotation(EntityLiving inEntity)
 	{
 		if(inEntity instanceof EntityInsentient)
-			return ((EntityInsentient)inEntity).bv();
+			return ((EntityInsentient)inEntity).bB(); //Unsure
 		else
 			return 40;
 	}

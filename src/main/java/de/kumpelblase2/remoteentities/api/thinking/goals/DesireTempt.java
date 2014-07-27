@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.api.thinking.goals;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import de.kumpelblase2.remoteentities.api.RemoteEntity;
 import de.kumpelblase2.remoteentities.api.thinking.DesireBase;
 import de.kumpelblase2.remoteentities.api.thinking.DesireType;
@@ -38,7 +38,7 @@ public class DesireTempt extends DesireBase
 		super(inEntity);
 		this.m_itemID = inItemID;
 		if(inItemID != -1)
-			this.m_item = Item.d(inItemID);
+			this.m_item = Item.getById(inItemID);
 
 		this.m_scaredByMovement = inScaredByMovement;
 		this.m_type = DesireType.FULL_CONCENTRATION;
@@ -57,7 +57,7 @@ public class DesireTempt extends DesireBase
 		this.m_type = DesireType.FULL_CONCENTRATION;
 		this.m_speed = inSpeed;
 		if(inItemID != -1)
-			this.m_item = Item.d(inItemID);
+			this.m_item = Item.getById(inItemID);
 	}
 
 	@Override
@@ -78,7 +78,7 @@ public class DesireTempt extends DesireBase
 				return false;
 			else
 			{
-				ItemStack item = this.m_nearPlayer.bE();
+				ItemStack item = this.m_nearPlayer.be();
 				return item != null && item.getItem() == this.m_item;
 			}
 		}

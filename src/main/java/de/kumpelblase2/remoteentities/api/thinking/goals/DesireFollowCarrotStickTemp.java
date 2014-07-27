@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.api.thinking.goals;
 
-import net.minecraft.server.v1_7_R3.PathfinderGoalPassengerCarrotStick;
+import net.minecraft.server.v1_7_R4.PathfinderGoalPassengerCarrotStick;
 import de.kumpelblase2.remoteentities.api.RemoteEntity;
 
 public class DesireFollowCarrotStickTemp extends PathfinderGoalPassengerCarrotStick

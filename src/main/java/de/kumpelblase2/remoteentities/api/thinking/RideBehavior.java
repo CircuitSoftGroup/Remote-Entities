@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.api.thinking;
 
-import net.minecraft.server.v1_7_R3.EntityLiving;
+import net.minecraft.server.v1_7_R4.EntityLiving;
 import de.kumpelblase2.remoteentities.api.RemoteEntity;
 import de.kumpelblase2.remoteentities.persistence.ParameterData;
 import de.kumpelblase2.remoteentities.persistence.SerializeAs;

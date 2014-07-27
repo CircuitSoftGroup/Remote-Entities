@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.entities;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.util.Vector;
@@ -86,7 +86,7 @@ public class RemoteLavaSlimeEntity extends EntityMagmaCube implements RemoteEnti
 
 			this.bc = true;
 			if(this.bW())
-				this.makeSound(this.bV(), this.be(), ((this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F) * 0.8F);
+				this.makeSound(this.bV(), this.bf(), ((this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F) * 0.8F);
 
 			this.bd = 1.0F - this.random.nextFloat() * 2.0F;
 			this.be = (float)this.getSize();
@@ -173,13 +173,13 @@ public class RemoteLavaSlimeEntity extends EntityMagmaCube implements RemoteEnti
 	}
 
 	@Override
-	protected String aS()
+	protected String aT()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.HURT, (this.getSize() > 1 ? "big" : "small"));
 	}
 
 	@Override
-	protected String aT()
+	protected String aU()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.DEATH, (this.getSize() > 1 ? "big" : "small"));
 	}

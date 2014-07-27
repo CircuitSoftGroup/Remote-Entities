@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.api.thinking.goals;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import org.bukkit.entity.Player;
 import de.kumpelblase2.remoteentities.api.RemoteEntity;
 import de.kumpelblase2.remoteentities.api.features.RidingFeature;
@@ -89,14 +89,14 @@ public class DesireTameByRiding extends DesireBase
 	public boolean update()
 	{
 		EntityLiving entity = this.getEntityHandle();
-		if(entity.aH().nextInt(50) == 0)
+		if(entity.aI().nextInt(50) == 0)
 		{
 			if(entity.passenger instanceof EntityHuman)
 			{
 				int i = this.getTemper();
 				int j = 100; //horse.getMaxDomestication()
 
-				if(j > 0 && entity.aH().nextInt(j) < i)
+				if(j > 0 && entity.aI().nextInt(j) < i)
 				{
 					this.setRideable();
 					entity.world.broadcastEntityEffect(entity, (byte)7);

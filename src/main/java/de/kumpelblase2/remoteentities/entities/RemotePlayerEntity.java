@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.entities;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import net.minecraft.util.com.mojang.authlib.GameProfile;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -39,7 +39,7 @@ public class RemotePlayerEntity extends EntityPlayer implements RemoteEntityHand
 		{
 		}
 
-		this.bb().b(GenericAttributes.b).setValue(16);
+		this.getAttributeMap().a(GenericAttributes.b).setValue(16);
 		iteminworldmanager.setGameMode(EnumGamemode.SURVIVAL);
 		this.noDamageTicks = 1;
 		this.W = 1;
@@ -106,7 +106,7 @@ public class RemotePlayerEntity extends EntityPlayer implements RemoteEntityHand
 
 		if(this.bc)
 		{
-			boolean inLiquid = K() || M();
+			boolean inLiquid = L() || M();
 			if(inLiquid)
 				this.motY += 0.04;
 			else if(this.onGround && this.m_jumpTicks == 0)

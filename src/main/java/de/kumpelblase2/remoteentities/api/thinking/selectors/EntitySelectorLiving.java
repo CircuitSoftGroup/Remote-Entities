@@ -1,7 +1,7 @@
 package de.kumpelblase2.remoteentities.api.thinking.selectors;
 
-import net.minecraft.server.v1_7_R3.Entity;
-import net.minecraft.server.v1_7_R3.IEntitySelector;
+import net.minecraft.server.v1_7_R4.Entity;
+import net.minecraft.server.v1_7_R4.IEntitySelector;
 
 public class EntitySelectorLiving implements IEntitySelector
 {

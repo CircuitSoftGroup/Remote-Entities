@@ -1,7 +1,7 @@
 package de.kumpelblase2.remoteentities.api.thinking.goals;
 
-import net.minecraft.server.v1_7_R3.Block;
-import net.minecraft.server.v1_7_R3.EntityLiving;
+import net.minecraft.server.v1_7_R4.Block;
+import net.minecraft.server.v1_7_R4.EntityLiving;
 import org.bukkit.Location;
 import de.kumpelblase2.remoteentities.api.RemoteEntity;
 import de.kumpelblase2.remoteentities.api.thinking.DesireBase;
@@ -59,7 +59,7 @@ public abstract class DesireFindBlockBase extends DesireBase
 			{
 				for(int z = (int)(entity.locZ - this.m_range); z < entity.locZ + this.m_range; z++)
 				{
-					if(Block.b(entity.world.getType(x, y, z)) == this.m_blockID)
+					if(Block.getId(entity.world.getType(x, y, z)) == this.m_blockID)
 					{
 						double dist = entity.e(x, y, z);
 						if(dist < shortestDistance)

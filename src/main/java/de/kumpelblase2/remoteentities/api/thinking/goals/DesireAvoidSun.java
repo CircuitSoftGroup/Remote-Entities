@@ -1,7 +1,7 @@
 package de.kumpelblase2.remoteentities.api.thinking.goals;
 
 import java.util.Random;
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import org.bukkit.Location;
 import de.kumpelblase2.remoteentities.api.RemoteEntity;
 import de.kumpelblase2.remoteentities.api.thinking.DesireBase;
@@ -74,7 +74,7 @@ public class DesireAvoidSun extends DesireBase
 	protected Vec3D getShadowPlace()
 	{
 		EntityLiving entity = this.getEntityHandle();
-		Random r = entity.aH();
+		Random r = entity.aI();
 
 		for(int i = 0; i < 10; i++)
 		{

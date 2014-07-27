@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.entities;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.util.Vector;
@@ -138,13 +138,13 @@ public class RemoteVillagerEntity extends EntityVillager implements RemoteEntity
 	}
 
 	@Override
-	protected String aS()
+	protected String aT()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.HURT);
 	}
 
 	@Override
-	protected String aT()
+	protected String aU()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.DEATH);
 	}
@@ -158,9 +158,9 @@ public class RemoteVillagerEntity extends EntityVillager implements RemoteEntity
 		{
 			this.a_ = -this.q();
 			if (itemstack != null)
-				this.makeSound(this.m_remoteEntity.getSound(EntitySound.YES), this.be(), this.bf());
+				this.makeSound(this.m_remoteEntity.getSound(EntitySound.YES), this.bf(), this.bg());
 			else
-				this.makeSound(this.m_remoteEntity.getSound(EntitySound.NO), this.be(), this.bf());
+				this.makeSound(this.m_remoteEntity.getSound(EntitySound.NO), this.bf(), this.bg());
 		}
 	}
 

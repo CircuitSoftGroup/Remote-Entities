@@ -1,7 +1,7 @@
 package de.kumpelblase2.remoteentities.api.features;
 
-import net.minecraft.server.v1_7_R3.EntityAnimal;
-import net.minecraft.server.v1_7_R3.EntityLiving;
+import net.minecraft.server.v1_7_R4.EntityAnimal;
+import net.minecraft.server.v1_7_R4.EntityLiving;
 import org.bukkit.entity.LivingEntity;
 
 public abstract class RemoteMateFeature extends RemoteFeature implements MateFeature

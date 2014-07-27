@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.nms;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import de.kumpelblase2.remoteentities.utilities.NMSUtil;
 
 public class PlayerNavigation extends Navigation
@@ -260,7 +260,7 @@ public class PlayerNavigation extends Navigation
 
 	private boolean m()
 	{
-		return this.a.L() || this.a.O();
+		return this.a.L() || this.a.P();
 	}
 
 	private void n()

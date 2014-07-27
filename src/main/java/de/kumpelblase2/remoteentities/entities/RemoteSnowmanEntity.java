@@ -1,6 +1,6 @@
 package de.kumpelblase2.remoteentities.entities;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.util.Vector;
@@ -133,13 +133,13 @@ public class RemoteSnowmanEntity extends EntitySnowman implements RemoteEntityHa
 	}
 
 	@Override
-	protected String aS()
+	protected String aT()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.HURT);
 	}
 
 	@Override
-	protected String aT()
+	protected String aU()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.DEATH);
 	}
@@ -156,7 +156,7 @@ public class RemoteSnowmanEntity extends EntitySnowman implements RemoteEntityHa
 		float f1 = MathHelper.sqrt(d0 * d0 + d2 * d2) * 0.2F;
 
 		entitysnowball.shoot(d0, d1 + (double)f1, d2, 1.6F, 12.0F);
-		this.makeSound(this.m_remoteEntity.getSound(EntitySound.ATTACK), 1.0F, 1.0F / (this.aH().nextFloat() * 0.4F + 0.8F));
+		this.makeSound(this.m_remoteEntity.getSound(EntitySound.ATTACK), 1.0F, 1.0F / (this.aI().nextFloat() * 0.4F + 0.8F));
 		this.world.addEntity(entitysnowball);
 	}
 

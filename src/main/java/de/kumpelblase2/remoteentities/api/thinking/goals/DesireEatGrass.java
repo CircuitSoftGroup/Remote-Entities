@@ -1,8 +1,8 @@
 package de.kumpelblase2.remoteentities.api.thinking.goals;
 
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_7_R3.event.CraftEventFactory;
+import org.bukkit.craftbukkit.v1_7_R4.event.CraftEventFactory;
 import de.kumpelblase2.remoteentities.api.RemoteEntity;
 import de.kumpelblase2.remoteentities.api.thinking.DesireBase;
 import de.kumpelblase2.remoteentities.api.thinking.DesireType;
@@ -47,7 +47,7 @@ public class DesireEatGrass extends DesireBase
 		if(this.getEntityHandle() == null)
 			return false;
 
-		if(this.getEntityHandle().aH().nextInt(this.getEntityHandle().isBaby() ? 50 : 1000) != 0)
+		if(this.getEntityHandle().aI().nextInt(this.getEntityHandle().isBaby() ? 50 : 1000) != 0)
 			return false;
 		else
 		{
@@ -95,7 +95,7 @@ public class DesireEatGrass extends DesireBase
 			{
 				if(!CraftEventFactory.callEntityChangeBlockEvent(this.getRemoteEntity().getBukkitEntity(), this.getEntityHandle().world.getWorld().getBlockAt(x, y - 1, z), Material.DIRT).isCancelled())
 				{
-					entity.world.triggerEffect(2001, x, y, z, Block.b(Blocks.GRASS));
+					entity.world.triggerEffect(2001, x, y, z, Block.getId(Blocks.GRASS));
 					entity.world.setTypeAndData(x, y - 1, z, Blocks.DIRT, 0, 2);
 					if(entity instanceof EntityInsentient)
 						((EntityInsentient)entity).p();

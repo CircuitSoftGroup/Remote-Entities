@@ -1,7 +1,7 @@
 package de.kumpelblase2.remoteentities.nms;
 
-import net.minecraft.server.v1_7_R3.ControllerJump;
-import net.minecraft.server.v1_7_R3.EntityLiving;
+import net.minecraft.server.v1_7_R4.ControllerJump;
+import net.minecraft.server.v1_7_R4.EntityLiving;
 import de.kumpelblase2.remoteentities.utilities.NMSUtil;
 
 public class PlayerControllerJump extends ControllerJump

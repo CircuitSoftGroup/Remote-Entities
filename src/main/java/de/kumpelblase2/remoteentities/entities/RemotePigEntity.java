@@ -1,7 +1,7 @@
 package de.kumpelblase2.remoteentities.entities;
 
 import java.lang.reflect.Field;
-import net.minecraft.server.v1_7_R3.*;
+import net.minecraft.server.v1_7_R4.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.util.Vector;
@@ -142,13 +142,13 @@ public class RemotePigEntity extends EntityPig implements RemoteEntityHandle
 	}
 
 	@Override
-	protected String aS()
+	protected String aT()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.HURT);
 	}
 
 	@Override
-	protected String aT()
+	protected String aU()
 	{
 		return this.m_remoteEntity.getSound(EntitySound.DEATH);
 	}
@@ -168,8 +168,8 @@ public class RemotePigEntity extends EntityPig implements RemoteEntityHandle
 					new DesireItem(new DesirePanic(1.25D), 1),
 					new DesireItem(new DesireFollowCarrotStick(0.3f), 2),
 					new DesireItem(new DesireBreed(), 3),
-					new DesireItem(new DesireTempt(Item.b(Items.CARROT), false, 1.2D), 4),
-					new DesireItem(new DesireTempt(Item.b(Items.CARROT_STICK), false, 1.2D), 4),
+					new DesireItem(new DesireTempt(Item.getId(Items.CARROT), false, 1.2D), 4),
+					new DesireItem(new DesireTempt(Item.getId(Items.CARROT_STICK), false, 1.2D), 4),
 					new DesireItem(new DesireFollowParent(), 5),
 					new DesireItem(new DesireWanderAround(), 6),
 					new DesireItem(new DesireLookAtNearest(EntityHuman.class, 6), 7),
